@@ -6,7 +6,7 @@
 # catalog-version 1.5
 Name:		texlive-mentis
 Version:	1.5
-Release:	1
+Release:	2
 Summary:	A basis for books to be published by Mentis publishers
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/mentis
