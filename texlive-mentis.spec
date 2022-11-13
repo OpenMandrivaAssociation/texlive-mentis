@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/mentis
-# catalog-date 2007-01-09 22:36:10 +0100
-# catalog-license lppl
-# catalog-version 1.5
 Name:		texlive-mentis
-Version:	1.5
-Release:	11
+Version:	15878
+Release:	1
 Summary:	A basis for books to be published by Mentis publishers
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/mentis
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mentis.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mentis.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mentis.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mentis.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mentis.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mentis.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ is not an official Mentis class, merely one developed by an
 author in close co-operation with Mentis.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -44,24 +38,11 @@ author in close co-operation with Mentis.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.5-2
-+ Revision: 753852
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.5-1
-+ Revision: 718991
-- texlive-mentis
-- texlive-mentis
-- texlive-mentis
-- texlive-mentis
-
