@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	A basis for books to be published by Mentis publishers
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/mentis
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/mentis
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mentis.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mentis.doc.r%{version}.tar.xz
